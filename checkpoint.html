@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //STRING MANIPULATION
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+          }
+          
+          let inputString = "HEY IT'S ME!";
+          let reversedString = reverseString(inputString);
+          console.log(reversedString); 
+
+         /* Array Functions:
+
+Find Maximum and Minimum: Write functions to find the maximum and minimum values in an array of numbers.
+Sum of Array: Create a function that calculates the sum of all elements in an array.
+Filter Array: Implement a function that filters out elements from an array based on a given condition.*/
+function findMax(arr) {
+    return Math.max(...arr);
+    }
+    function findMin(arr) {
+        return Math.min(...arr);
+        }
+        function sumArray(arr) {
+            return arr.reduce((a, b) => a + b, 0);
+            }
+            function filterArray(arr, condition) {
+                return arr.filter(condition);
+                }
+                let numbers = [10, 25, 38, 41, 59];
+                console.log(findMax(numbers));
+                console.log(findMin(numbers)); 
+
+              /*  Mathematical Functions:
+
+Factorial: Write a function to calculate the factorial of a given number.
+Prime Number Check: Create a function to check if a number is prime or not.
+Fibonacci Sequence: Implement a function to generate the Fibonacci sequence up to a given number of terms.*/
+function factorial(n) {
+    if (n === 0 || n === 1) {
+      return 1;
+    } else {
+      return n * factorial(n - 1);
+    }
+  }
+  
+  let number = 5;
+  let factorialResult = factorial(number);
+  console.log(factorialResult);
+// prime number
+  function isPrime(number) {
+    if (number <= 1) {
+      return false;
+    }
+  
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+  
+    return true;
+  }
+  
+  let numb = 17;
+  let isPrimeResult = isPrime(numb);
+  console.log(isPrimeResult); 
+
+    //FIBONACCI
+    function fibonacci(n) {
+      if (n <= 0) {
+        return 0;
+      } else if (n === 1) {
+        return 1;
+      } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+      }
+    }
+    
+    const numberOfTerms = 10;
+    const fibonacciSequence = [];
+    for (let i = 1; i <= numberOfTerms; i++) {
+      fibonacciSequence.push(fibonacci(i));
+    }
+    console.log(fibonacciSequence); // Output: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]                                            
+
+
+
+                                                
+                                        
+
+    </script>
+</body>
+</html>
